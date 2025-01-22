@@ -13,7 +13,7 @@ if(!defined('INDEX')) die("");
     </div>
 
     <div class="form-group">
-        <input type="reset" value="Reset" class="tombol-reset">
+        <input type="reset" value="Reset" class="tombol reset">
         <input type="submit" value="Simpan" class="tombol simpan">
     </div>
 </form>

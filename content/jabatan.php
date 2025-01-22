@@ -1,8 +1,9 @@
 <?php
-    if (!defined('INDEX')) die("");
+    if(!defined('INDEX')) die("");
 ?>
     <h2 class="judul">Data Pegawai</h2>
     <a href="jabatan_tambah" class="tombol">Tambah</a>
+    
     <table class="table">
         <thead>
             <tr>

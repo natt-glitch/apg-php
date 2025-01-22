@@ -15,6 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Link rel="stylesheet" href="css/style.css">
@@ -26,9 +27,9 @@
     <div class="container">
         <aside>
             <ul class="menu">
-                <li><a href="?dashboard.html">Dashboard</a></li>
-                <li><a href="?tabel.html">Data Pegawai</a></li>
-                <li><a href="?tabel.html">Data Jabatan</a></li>
+                <li><a href="?hal=dashboard.html">Dashboard</a></li>
+                <li><a href="?hal=pegawai.html">Data Pegawai</a></li>
+                <li><a href="?hal=jabatan.html">Data Jabatan</a></li>
                 <li><a href="logout.php">Keluar</a></li>
             </ul>
         </aside>
