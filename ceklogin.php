@@ -3,10 +3,10 @@
     include "library/config.php";
 
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
 
-    $query = "select * from user where username = '$username' and password = '$password'";
-    $hasil = mysqli_query($icon, $query);
+    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+    $hasil = mysqli_query($con,$query);
     $data = mysqli_fetch_array($hasil);
     $jml = mysqli_num_rows($hasil);
 
@@ -17,6 +17,6 @@
         header('location: index.php');
     } else{
         echo "<p align='center'>Login Gagal!</p>";
-        echo "<meta http-equiv='refresh' content='2; url=loogin.php'>";
+        echo "<meta http-equiv='refresh' content='2; url=login.php'>";
     }
 ?>

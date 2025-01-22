@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Login Aplikasi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Aplikasi</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <form action="ceklogin.php" method="post">
                 <input type="text" placeholder="Username" id="username" name="username">
                 <input type="password" placeholder="Password" id="password" name="password">              
-                <input type="usbmit" value="Login">
+                <input type="submit" value="Login">
             </form>
         </section>
     </dic>

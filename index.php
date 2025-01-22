@@ -4,7 +4,7 @@
 
     include "library/config.php";
 
-    if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
+    if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
         echo "<p align='center'>Anda harus login terlebih dahulu!</p>";
         echo "<meta http-equiv='refresh' content='2; url=login.php'>";
     } else {
@@ -26,15 +26,14 @@
     <div class="container">
         <aside>
             <ul class="menu">
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="tabel.html">Data Pegawai</a></li>
-                <li><a href="tabel.html">Data Jabatan</a></li>
-                <li><a href="index.html">Keluar</a></li>
+                <li><a href="?dashboard.html">Dashboard</a></li>
+                <li><a href="?tabel.html">Data Pegawai</a></li>
+                <li><a href="?tabel.html">Data Jabatan</a></li>
+                <li><a href="logout.php">Keluar</a></li>
             </ul>
         </aside>
         <section class="main">
-            <h1>Selamat Datang di Aplikasi Manajemen Pegawai</h1>
-            <h3>Anda Login sebagai Administrator</h3>
+            <?php include "konten.php" ?>
         </section>
     </div>
     <footer>
