@@ -5,10 +5,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
-    $hasil = mysqli_query($con,$query);
-    $data = mysqli_fetch_array($hasil);
-    $jml = mysqli_num_rows($hasil);
+    $query = mysqli_query($con, "SELECT * FROM user WHERE username = '$username' AND password = '$password' ");
+    $data = mysqli_fetch_array($query);
+    $jml = mysqli_num_rows($query);
 
     if ($jml > 0 ){
         $_SESSION['username'] = $data['username'];
