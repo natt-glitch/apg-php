@@ -1,14 +1,14 @@
 <?php
     session_start();
-    ob_start();
+    ob_start(); //menjalankan pengaturan agar bisa mengakses database
 
     include "library/config.php";
 
-    if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
+    if (empty($_SESSION['username']) OR empty($_SESSION['password'])) { //jika session username dan password kosong
         echo "<p align='center'>Anda harus login terlebih dahulu!</p>";
         echo "<meta http-equiv='refresh' content='2; url=login.php'>";
     } else {
-        define('INDEX', true);  
+        define('INDEX', true);  //menuju ke halaman index.php
 ?>
 
 
@@ -25,24 +25,25 @@
         Aplikasi Manajemen Pegawai
     </header>
     <div class="container">
-        <aside>
+        <aside> <!-- digunakan untuk menampilkan menu -->
             <ul class="menu">
-                <li><a href="?hal=dashboard.html">Dashboard</a></li>
-                <li><a href="?hal=pegawai.html">Data Pegawai</a></li>
-                <li><a href="?hal=jabatan.html">Data Jabatan</a></li>
+                <li><a href="?hal=dashboard">Dashboard</a></li>
+                <li><a href="?hal=pegawai">Data Pegawai</a></li>
+                <li><a href="?hal=jabatan">Data Jabatan</a></li>
+                <li><a href="?hal=nata">halo</a></li>
                 <li><a href="logout.php">Keluar</a></li>
             </ul>
         </aside>
         <section class="main">
-            <?php include "konten.php" ?>
+            <?php include "konten.php" ?> <!-- digunakan untuk menampilkan konten -->
         </section>
     </div>
     <footer>
-        Made with 🤝 + 🍻 = 💝 <b>Kelompok 5 </b>
+        Made with 🤝 + 🍻 = 💝 by <b>Kelompok 5 </b> 
     </footer>
 </body>
 </html>
 
 <?php
-}
+} //menutup else pada baris 13
 ?>

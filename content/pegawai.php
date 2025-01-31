@@ -1,5 +1,5 @@
 <?php
-if(!definesd('INDEX')) die();
+if(!defined('INDEX')) die();
 ?>
 
 <h2 class="judul">Data Pegawai</h2>
@@ -18,16 +18,15 @@ if(!definesd('INDEX')) die();
     </thead>
     <tbody>
 <?php
-$query = "SELECT * FROM pegawai";
-$query .= "LEFT JOIN jabatan";
-$query .= "ON pegawai.id_jabatan = jabatan.id_jabatan";
+$query = "SELECT * FROM pegawai ";
+$query .= "LEFT JOIN jabatan ";
+$query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
 $query .= "ORDER BY pegawai.id_jabatan DESC";
 $result = mysqli_query($con, $query);
 $no = 0;
 
-while ($data = mysqli_fetch_assoc) {
+while ($data = mysqli_fetch_assoc($result)) {
     $no++;
-}
 ?>
 <tr>
     <td><?=$no;?></td>
@@ -37,8 +36,17 @@ while ($data = mysqli_fetch_assoc) {
     <td><?=$data['tgl_lahir']?></td>
     <td><?=$data['nama_jabatan']?></td>
     <td><?=$data['keterangan']?></td>
-    <td></td>
+    <td>
+        <a href="?hal=pegawai_edit&id=<?=$data['id_pegawai']?>"
+        class="tombol edit">Edit</a>
+        <a href="?hal=pegawai_hapus&id=<?=$data['id_pegawai']?>&foto=<?=$data['foto']?>"
+        class="tombol hapus">hapus</a>
+    </td>
 </tr>
 
+
+<?php
+}
+?>
     </tbody>
 </table>
